@@ -35,7 +35,7 @@ public class DetailActivity extends AppCompatActivity {
             case 3:
                 return "Số 3 biểu trưng cho sáng tạo, giao tiếp và nghệ thuật.";
             case 6:
-                return "Số 6 mang ý nghĩa của tình yêu, trách nhiệm và gia đình.";
+                return "Số 6 mang ý nghĩa của tình, trách nhiệm và gia đình.";
             default:
                 return "Chưa có thông tin cho số chủ đạo này.";
         }
