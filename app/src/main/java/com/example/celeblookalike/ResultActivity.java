@@ -41,7 +41,7 @@ public class ResultActivity extends AppCompatActivity {
             for (Celebrity celeb : celebrities) {
                 // Image
                 ImageView imageView = new ImageView(this);
-                LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(400, 400);
+                LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(700, 500);
                 imageParams.setMargins(0, 24, 0, 8);
                 imageView.setLayoutParams(imageParams);
                 imageView.setImageResource(celeb.getImageResId());
@@ -75,6 +75,11 @@ public class ResultActivity extends AppCompatActivity {
             Intent intent = new Intent(ResultActivity.this, DetailActivity.class);
             intent.putExtra("lifePath", lifePath);
             startActivity(intent);
+        });
+
+        Button btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> {
+            finish(); // Quay lại màn trước (ResultActivity)
         });
     }
 
@@ -170,4 +175,6 @@ public class ResultActivity extends AppCompatActivity {
 
         return celebrityMap.getOrDefault(lifePath, new ArrayList<>());
     }
+
+
 }

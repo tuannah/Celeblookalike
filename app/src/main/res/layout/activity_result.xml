@@ -6,39 +6,54 @@
     android:background="#FAFAFA">
 
     <LinearLayout
-        android:id="@+id/layoutCelebrities"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center_horizontal">
-
-    <TextView
-        android:id="@+id/txtWelcome"
-        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Xin chào,"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="12dp" />
+        android:gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/txtLifePath"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Số chủ đạo của bạn là: "
-        android:textSize="18sp"
-        android:layout_marginBottom="16dp" />
+        <LinearLayout
+            android:id="@+id/layoutCelebrities"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
 
-    <TextView
-        android:id="@+id/txtCelebrities"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Người nổi tiếng giống bạn:"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"
-        android:textStyle="bold"
-        android:layout_marginBottom="12dp" />
+            <TextView
+                android:id="@+id/txtWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xin chào,"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="12dp" />
 
+            <TextView
+                android:id="@+id/txtLifePath"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số chủ đạo của bạn là: "
+                android:textSize="18sp"
+                android:layout_marginBottom="16dp" />
 
-</LinearLayout>
-    </ScrollView>
+            <TextView
+                android:id="@+id/txtCelebrities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Người nổi tiếng giống bạn:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+
+        <!-- Nút quay lại: nằm cuối cùng -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quay lại"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+</ScrollView>
