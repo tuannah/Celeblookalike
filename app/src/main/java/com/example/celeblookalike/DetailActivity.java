@@ -1,6 +1,7 @@
 package com.example.celeblookalike;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +19,11 @@ public class DetailActivity extends AppCompatActivity {
 
         int lifePath = getIntent().getIntExtra("lifePath", 0);
         txtDetail.setText(getLifePathDescription(lifePath));
+
+        Button btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> {
+            finish(); // Quay lại màn trước (ResultActivity)
+        });
     }
 
     private String getLifePathDescription(int number) {
