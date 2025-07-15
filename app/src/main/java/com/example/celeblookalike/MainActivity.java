@@ -40,8 +40,13 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("name", name);
                 intent.putExtra("lifePath", lifePathNumber);
                 startActivity(intent);
+
+
+
             }
+
         });
+
     }
 
     private int getLifePathNumber(int day, int month, int year) {
