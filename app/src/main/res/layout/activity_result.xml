@@ -1,59 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="24dp"
-    android:background="#FAFAFA">
+    android:layout_height="match_parent">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <!-- Hình nền full màn hình -->
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/nen"
+        android:scaleType="centerCrop"
+        android:contentDescription="Background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ScrollView chứa nội dung -->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal">
+        android:layout_height="0dp"
+        android:padding="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
-            android:id="@+id/layoutCelebrities"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/txtWelcome"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/layoutCelebrities"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Xin chào,"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="12dp" />
+                android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/txtLifePath"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Số chủ đạo của bạn là: "
-                android:textSize="18sp"
-                android:layout_marginBottom="16dp" />
+                <TextView
+                    android:id="@+id/txtWelcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Xin chào,"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="12dp" />
 
-            <TextView
-                android:id="@+id/txtCelebrities"
+                <TextView
+                    android:id="@+id/txtLifePath"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số chủ đạo của bạn là: "
+                    android:textSize="18sp"
+                    android:layout_marginBottom="16dp" />
+
+                <TextView
+                    android:id="@+id/txtCelebrities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Người nổi tiếng giống bạn:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="12dp" />
+            </LinearLayout>
+
+            <!-- Nút quay lại: nằm cuối cùng -->
+            <Button
+                android:id="@+id/btnBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Người nổi tiếng giống bạn:"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="12dp" />
+                android:text="Quay lại"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="24dp"
+                android:layout_gravity="center_horizontal"/>
         </LinearLayout>
-
-        <!-- Nút quay lại: nằm cuối cùng -->
-        <Button
-            android:id="@+id/btnBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quay lại"
-            android:layout_marginTop="40dp"
-            android:layout_marginBottom="24dp"
-            android:layout_gravity="center_horizontal"/>
-    </LinearLayout>
-</ScrollView>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

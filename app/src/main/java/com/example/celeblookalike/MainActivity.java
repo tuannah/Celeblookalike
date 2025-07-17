@@ -32,12 +32,14 @@ public class MainActivity extends AppCompatActivity {
                 int day = datePicker.getDayOfMonth();
                 int month = datePicker.getMonth() + 1; // tháng bắt đầu từ 0
                 int year = datePicker.getYear();
+                String birthDate = String.format("%02d/%02d/%d", day, month, year);
 
                 int lifePathNumber = getLifePathNumber(day, month, year);
 
                 // Chuyển sang ResultActivity
                 Intent intent = new Intent(MainActivity.this, ResultActivity.class);
                 intent.putExtra("name", name);
+                intent.putExtra("birthDate", birthDate);
                 intent.putExtra("lifePath", lifePathNumber);
                 startActivity(intent);
 

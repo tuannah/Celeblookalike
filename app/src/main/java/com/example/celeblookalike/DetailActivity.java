@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+
 public class DetailActivity extends AppCompatActivity {
 
     TextView txtDetail;
@@ -19,23 +20,30 @@ public class DetailActivity extends AppCompatActivity {
         txtDetail = findViewById(R.id.txtDetail);
 
         int lifePath = getIntent().getIntExtra("lifePath", 0);
+        String name = getIntent().getStringExtra("name");           // ✅ THÊM: Nhận name
+        String birthDate = getIntent().getStringExtra("birthDate"); // ✅ THÊM: Nhận birthDate
+
         txtDetail.setText(getLifePathDescription(lifePath));
 
         Button btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> {
             finish(); // Quay lại màn trước (ResultActivity)
         });
+
         // Button chuyển đến màn tử vi
         Button btnHoroscope = findViewById(R.id.btnHoroscope);
         btnHoroscope.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Điều hướng đến màn xem tử vi
+                // ✅ SỬA: Truyền đủ dữ liệu cần thiết
                 Intent intent = new Intent(DetailActivity.this, HoroscopeActivity.class);
+                intent.putExtra("birthDate", birthDate); // ✅ THÊM: Truyền birthDate
+                intent.putExtra("name", name);           // ✅ THÊM: Truyền name
                 startActivity(intent);
             }
         });
     }
+
 
     private String getLifePathDescription(int number) {
         switch (number) {
@@ -218,7 +226,7 @@ public class DetailActivity extends AppCompatActivity {
                         "- Nhà tư vấn, trị liệu viên.\n" +
                         "Màu sắc may mắn: Vàng, đỏ, cam.\n" +
                         "Hành tinh chi phối: Sao Hỏa.\n";
-            case 10:
+            case 11:
                 return "Số 10 kết hợp giữa sự độc lập của số 1 và sự hoàn thiện của số 0. Những người mang số này có khả năng lãnh đạo, sáng tạo và hướng tới sự hoàn hảo. Họ có thể gặp khó khăn trong việc chấp nhận thất bại hoặc thiếu kiên nhẫn.\n" +
                         "\n" +
                         "Ưu điểm:\n" +
