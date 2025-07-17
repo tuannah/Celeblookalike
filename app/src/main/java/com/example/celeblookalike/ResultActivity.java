@@ -26,6 +26,7 @@ public class ResultActivity extends AppCompatActivity {
         layoutCelebrities = findViewById(R.id.layoutCelebrities);
 
         String name = getIntent().getStringExtra("name");
+        String birthDate = getIntent().getStringExtra("birthDate"); // ✅ THÊM: Nhận birthDate
         int lifePath = getIntent().getIntExtra("lifePath", 0);
 
         txtWelcome.setText("Xin chào, " + name);
@@ -74,6 +75,8 @@ public class ResultActivity extends AppCompatActivity {
         btnDetails.setOnClickListener(v -> {
             Intent intent = new Intent(ResultActivity.this, DetailActivity.class);
             intent.putExtra("lifePath", lifePath);
+            intent.putExtra("name", name);           // ✅ THÊM: Truyền name
+            intent.putExtra("birthDate", birthDate); // ✅ THÊM: Truyền birthDate
             startActivity(intent);
         });
 
@@ -171,10 +174,6 @@ public class ResultActivity extends AppCompatActivity {
 
         ));
 
-
-
         return celebrityMap.getOrDefault(lifePath, new ArrayList<>());
     }
-
-
 }

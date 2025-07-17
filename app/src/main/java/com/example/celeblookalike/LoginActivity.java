@@ -12,7 +12,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class LoginActivity extends AppCompatActivity {
 
     EditText edtEmail, edtPassword;
-    Button btnLogin, btnGoRegister;
+    Button btnLogin;
+    TextView btnGoRegister;
     UserDatabaseHelper db;
 
     @Override
@@ -23,25 +24,39 @@ public class LoginActivity extends AppCompatActivity {
         edtEmail = findViewById(R.id.edtEmail);
         edtPassword = findViewById(R.id.edtPassword);
         btnLogin = findViewById(R.id.btnLogin);
-        TextView btnGoRegister = findViewById(R.id.btnGoRegister);
+        btnGoRegister = findViewById(R.id.btnGoRegister);
         db = new UserDatabaseHelper(this);
 
         btnLogin.setOnClickListener(v -> {
-            String email = edtEmail.getText().toString();
-            String pass = edtPassword.getText().toString();
+            String email = edtEmail.getText().toString().trim();
+            String password = edtPassword.getText().toString().trim();
 
-            if (db.checkUser(email, pass)) {
+            if (!db.validateInput(email, password)) {
+                Toast.makeText(this, "Email hoặc mật khẩu không hợp lệ. Mật khẩu cần ít nhất 6 ký tự, chứa chữ và số.", Toast.LENGTH_LONG).show();
+                return;
+            }
+
+            if (db.checkUser(email, password)) {
                 Toast.makeText(this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
+
+                // Gửi kết quả về LandingActivity
+                Intent intent = new Intent();
+                intent.putExtra("email", email);
+                setResult(RESULT_OK, intent);
+                finish(); // 👈 Rất quan trọng: kết thúc LoginActivity
             } else {
-                Toast.makeText(this, "Sai thông tin đăng nhập", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Email hoặc mật khẩu không đúng", Toast.LENGTH_SHORT).show();
             }
         });
 
         btnGoRegister.setOnClickListener(v -> {
-            startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
+            startActivity(new Intent(this, RegisterActivity.class));
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (db != null) db.close();
     }
 }
