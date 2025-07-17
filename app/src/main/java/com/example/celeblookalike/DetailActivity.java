@@ -226,7 +226,7 @@ public class DetailActivity extends AppCompatActivity {
                         "- Nhà tư vấn, trị liệu viên.\n" +
                         "Màu sắc may mắn: Vàng, đỏ, cam.\n" +
                         "Hành tinh chi phối: Sao Hỏa.\n";
-            case 10:
+            case 11:
                 return "Số 10 kết hợp giữa sự độc lập của số 1 và sự hoàn thiện của số 0. Những người mang số này có khả năng lãnh đạo, sáng tạo và hướng tới sự hoàn hảo. Họ có thể gặp khó khăn trong việc chấp nhận thất bại hoặc thiếu kiên nhẫn.\n" +
                         "\n" +
                         "Ưu điểm:\n" +

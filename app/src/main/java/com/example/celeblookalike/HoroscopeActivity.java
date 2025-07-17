@@ -208,29 +208,69 @@ public class HoroscopeActivity extends AppCompatActivity {
     private String getBirthDayDescription(int number) {
         switch (number) {
             case 1:
-                return "Ngày sinh 1 - Tài năng lãnh đạo\n\nBạn có tài năng lãnh đạo tự nhiên và khả năng khởi xướng. Thích làm việc độc lập và có thể đưa ra quyết định nhanh chóng. Bạn thường thành công khi được giao trách nhiệm và quyền hạn.";
+                return "Ngày sinh 1 - Tài năng lãnh đạo tiên phong\n\nBạn có tài năng lãnh đạo tự nhiên và khả năng khởi xướng. Thích làm việc độc lập và thường là người tiên phong trong các ý tưởng mới. Bạn thành công khi được giao trách nhiệm lớn.";
             case 2:
-                return "Ngày sinh 2 - Tài năng hợp tác\n\nBạn có tài năng làm việc nhóm và khả năng hòa giải. Thích làm việc trong môi trường hợp tác và có thể hiểu được quan điểm của người khác. Bạn thường thành công khi được làm việc với người khác.";
+                return "Ngày sinh 2 - Tài năng hợp tác nhạy cảm\n\nBạn có tài năng làm việc nhóm và khả năng hòa giải tinh tế. Thích môi trường yên bình và thường là cầu nối giữa mọi người. Bạn thành công khi làm việc với người khác.";
             case 3:
-                return "Ngày sinh 3 - Tài năng giao tiếp\n\nBạn có tài năng giao tiếp và khả năng sáng tạo. Thích thể hiện bản thân và có thể truyền đạt ý tưởng một cách hiệu quả. Bạn thường thành công trong các lĩnh vực đòi hỏi sự sáng tạo và giao tiếp.";
+                return "Ngày sinh 3 - Tài năng giao tiếp sáng tạo\n\nBạn có tài năng giao tiếp và khả năng sáng tạo độc đáo. Thích thể hiện bản thân qua nghệ thuật hoặc lời nói. Bạn thành công trong các lĩnh vực sáng tạo và truyền cảm hứng.";
             case 4:
-                return "Ngày sinh 4 - Tài năng tổ chức\n\nBạn có tài năng tổ chức và khả năng làm việc có hệ thống. Thích có kế hoạch rõ ràng và có thể hoàn thành công việc một cách chính xác. Bạn thường thành công khi được giao những nhiệm vụ đòi hỏi sự tỉ mỉ.";
+                return "Ngày sinh 4 - Tài năng tổ chức chắc chắn\n\nBạn có tài năng tổ chức và khả năng xây dựng nền tảng vững chắc. Thích làm việc có kế hoạch và tỉ mỉ. Bạn thành công với các nhiệm vụ đòi hỏi sự kiên nhẫn.";
             case 5:
-                return "Ngày sinh 5 - Tài năng thích nghi\n\nBạn có tài năng thích nghi và khả năng đối phó với thay đổi. Thích môi trường linh hoạt và có thể học hỏi nhanh chóng. Bạn thường thành công khi được làm việc trong môi trường đa dạng.";
+                return "Ngày sinh 5 - Tài năng thích nghi linh hoạt\n\nBạn có tài năng thích nghi và khả năng đối phó với thay đổi nhanh chóng. Thích tự do và khám phá mới. Bạn thành công trong môi trường năng động.";
             case 6:
-                return "Ngày sinh 6 - Tài năng chăm sóc\n\nBạn có tài năng chăm sóc và khả năng tạo ra sự hài hòa. Thích giúp đỡ người khác và có thể tạo ra môi trường thoải mái. Bạn thường thành công khi được làm việc với con người.";
+                return "Ngày sinh 6 - Tài năng chăm sóc ấm áp\n\nBạn có tài năng chăm sóc và khả năng tạo sự hài hòa. Thích giúp đỡ gia đình hoặc cộng đồng. Bạn thành công khi làm việc với con người và xây dựng mối quan hệ.";
             case 7:
-                return "Ngày sinh 7 - Tài năng phân tích\n\nBạn có tài năng phân tích và khả năng nghiên cứu. Thích làm việc độc lập và có thể tìm hiểu sâu về vấn đề. Bạn thường thành công khi được làm việc với những vấn đề phức tạp.";
+                return "Ngày sinh 7 - Tài năng phân tích sâu sắc\n\nBạn có tài năng phân tích và khả năng nghiên cứu chi tiết. Thích làm việc một mình và tìm kiếm tri thức. Bạn thành công với các vấn đề phức tạp.";
             case 8:
-                return "Ngày sinh 8 - Tài năng quản lý\n\nBạn có tài năng quản lý và khả năng kinh doanh. Thích có quyền hạn và có thể đưa ra quyết định kinh doanh hiệu quả. Bạn thường thành công trong các vị trí quản lý hoặc kinh doanh.";
+                return "Ngày sinh 8 - Tài năng quản lý mạnh mẽ\n\nBạn có tài năng quản lý và khả năng kinh doanh thực tế. Thích quyền lực và thành công vật chất. Bạn thành công trong các vai trò lãnh đạo hoặc kinh doanh.";
             case 9:
-                return "Ngày sinh 9 - Tài năng phục vụ\n\nBạn có tài năng phục vụ và khả năng hiểu người khác. Thích làm việc vì lợi ích chung và có thể tạo ra sự thay đổi tích cực. Bạn thường thành công khi được phục vụ cộng đồng.";
+                return "Ngày sinh 9 - Tài năng phục vụ nhân đạo\n\nBạn có tài năng phục vụ và khả năng thấu hiểu. Thích làm việc vì lợi ích lớn hơn. Bạn thành công khi cống hiến cho cộng đồng.";
+            case 10:
+                return "Ngày sinh 10 - Tài năng lãnh đạo độc lập\n\nBạn có tài năng lãnh đạo kết hợp với sự sáng tạo. Thích bắt đầu dự án mới và tự tin trong quyết định. Bạn thành công khi kết hợp độc lập và đổi mới.";
             case 11:
-                return "Ngày sinh 11 - Tài năng trực giác\n\nBạn có tài năng trực giác và khả năng nhạy cảm. Thích làm việc với những vấn đề tinh thần và có thể hiểu được những điều không nói ra. Bạn thường thành công khi được sử dụng trực giác.";
+                return "Ngày sinh 11 - Tài năng trực giác cao\n\nBạn có tài năng trực giác và khả năng nhạy cảm sâu sắc. Thích làm việc với các vấn đề tâm linh. Bạn thành công khi tin vào trực giác của mình.";
+            case 12:
+                return "Ngày sinh 12 - Tài năng sáng tạo hài hòa\n\nBạn có tài năng sáng tạo và khả năng hòa giải. Thích kết nối mọi người qua nghệ thuật. Bạn thành công khi kết hợp cảm xúc và sáng tạo.";
+            case 13:
+                return "Ngày sinh 13 - Tài năng tổ chức đổi mới\n\nBạn có tài năng tổ chức và khả năng vượt qua thử thách. Thích thay đổi để cải thiện. Bạn thành công với các dự án đòi hỏi sự kiên trì.";
+            case 14:
+                return "Ngày sinh 14 - Tài năng thích nghi tự do\n\nBạn có tài năng thích nghi và khả năng linh hoạt cao. Thích khám phá và thay đổi liên tục. Bạn thành công trong môi trường không ổn định.";
+            case 15:
+                return "Ngày sinh 15 - Tài năng chăm sóc nghệ thuật\n\nBạn có tài năng chăm sóc kết hợp với sự sáng tạo. Thích làm đẹp cho cuộc sống. Bạn thành công khi kết hợp tình yêu và thẩm mỹ.";
+            case 16:
+                return "Ngày sinh 16 - Tài năng phân tích sâu\n\nBạn có tài năng phân tích và khả năng tự phản ánh. Thích tìm hiểu bản thân và thế giới. Bạn thành công với các nghiên cứu nội tâm.";
+            case 17:
+                return "Ngày sinh 17 - Tài năng lãnh đạo tinh thần\n\nBạn có tài năng lãnh đạo kết hợp với trực giác. Thích truyền cảm hứng cho người khác. Bạn thành công khi dẫn dắt với tầm nhìn.";
+            case 18:
+                return "Ngày sinh 18 - Tài năng phục vụ sáng tạo\n\nBạn có tài năng phục vụ và khả năng nghệ thuật. Thích giúp đỡ qua sáng tạo. Bạn thành công khi kết hợp lý tưởng và hành động.";
+            case 19:
+                return "Ngày sinh 19 - Tài năng lãnh đạo độc lập\n\nBạn có tài năng lãnh đạo mạnh mẽ và tự chủ. Thích làm việc riêng và đạt thành tựu cá nhân. Bạn thành công khi tự lập.";
+            case 20:
+                return "Ngày sinh 20 - Tài năng hợp tác nhạy bén\n\nBạn có tài năng làm việc nhóm và khả năng nhạy cảm. Thích hỗ trợ người khác. Bạn thành công trong các mối quan hệ.";
+            case 21:
+                return "Ngày sinh 21 - Tài năng giao tiếp vui vẻ\n\nBạn có tài năng giao tiếp và khả năng lan tỏa niềm vui. Thích kết nối xã hội. Bạn thành công trong các môi trường thân thiện.";
             case 22:
-                return "Ngày sinh 22 - Tài năng kiến tạo\n\nBạn có tài năng kiến tạo và khả năng thực hiện những dự án lớn. Thích làm việc với tầm nhìn xa và có thể biến ước mơ thành hiện thực. Bạn thường thành công khi được làm việc với những mục tiêu lớn.";
+                return "Ngày sinh 22 - Tài năng kiến tạo vĩ đại\n\nBạn có tài năng kiến tạo và khả năng thực hiện tầm nhìn lớn. Thích làm việc với mục tiêu dài hạn. Bạn thành công với các dự án lớn.";
+            case 23:
+                return "Ngày sinh 23 - Tài năng thích nghi sáng tạo\n\nBạn có tài năng thích nghi và khả năng đổi mới. Thích khám phá và phát triển. Bạn thành công trong các lĩnh vực năng động.";
+            case 24:
+                return "Ngày sinh 24 - Tài năng chăm sóc gia đình\n\nBạn có tài năng chăm sóc và xây dựng gia đình. Thích tạo sự ổn định. Bạn thành công khi làm việc với người thân yêu.";
+            case 25:
+                return "Ngày sinh 25 - Tài năng phân tích trực giác\n\nBạn có tài năng phân tích kết hợp với trực giác. Thích nghiên cứu sâu và cảm nhận. Bạn thành công với các vấn đề phức tạp.";
+            case 26:
+                return "Ngày sinh 26 - Tài năng quản lý thực tế\n\nBạn có tài năng quản lý và khả năng tổ chức tài chính. Thích xây dựng sự ổn định. Bạn thành công trong kinh doanh.";
+            case 27:
+                return "Ngày sinh 27 - Tài năng phục vụ trí tuệ\n\nBạn có tài năng phục vụ và khả năng truyền đạt tri thức. Thích giúp đỡ qua giáo dục. Bạn thành công khi chia sẻ.";
+            case 28:
+                return "Ngày sinh 28 - Tài năng lãnh đạo mạnh mẽ\n\nBạn có tài năng lãnh đạo và khả năng cạnh tranh. Thích vượt qua thử thách. Bạn thành công trong các vai trò quyền lực.";
+            case 29:
+                return "Ngày sinh 29 - Tài năng phục vụ nhạy cảm\n\nBạn có tài năng phục vụ và khả năng cảm xúc sâu sắc. Thích giúp đỡ người khác. Bạn thành công khi kết nối tình cảm.";
+            case 30:
+                return "Ngày sinh 30 - Tài năng giao tiếp nghệ thuật\n\nBạn có tài năng giao tiếp và khả năng sáng tạo cao. Thích thể hiện qua nghệ thuật. Bạn thành công trong các lĩnh vực biểu diễn.";
+            case 31:
+                return "Ngày sinh 31 - Tài năng lãnh đạo sáng tạo\n\nBạn có tài năng lãnh đạo và khả năng đổi mới. Thích làm việc độc lập với ý tưởng mới. Bạn thành công khi tự do sáng tạo.";
             default:
-                return "Ngày sinh " + number + " - Mang những tài năng độc đáo cần được phát triển.";
+                return "Ngày sinh " + number + " - Mang những tài năng độc đáo cần được khám phá.";
         }
     }
 
