@@ -13,25 +13,25 @@
             android:id="@+id/txtDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:text="Thông tin chi tiết"
+            android:layout_marginBottom="24dp"
             android:lineSpacingExtra="8dp"
-            android:layout_marginBottom="24dp" />
+            android:text="Thông tin chi tiết"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Quay lại"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:text="Quay lại" />
 
         <Button
             android:id="@+id/btnHoroscope"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Xem Tử Vi"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:text="Các chỉ số khác" />
 
     </LinearLayout>
 </ScrollView>

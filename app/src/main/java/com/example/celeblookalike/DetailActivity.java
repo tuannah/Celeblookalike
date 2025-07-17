@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
+
 public class DetailActivity extends AppCompatActivity {
 
     TextView txtDetail;
@@ -19,23 +20,30 @@ public class DetailActivity extends AppCompatActivity {
         txtDetail = findViewById(R.id.txtDetail);
 
         int lifePath = getIntent().getIntExtra("lifePath", 0);
+        String name = getIntent().getStringExtra("name");           // ✅ THÊM: Nhận name
+        String birthDate = getIntent().getStringExtra("birthDate"); // ✅ THÊM: Nhận birthDate
+
         txtDetail.setText(getLifePathDescription(lifePath));
 
         Button btnBack = findViewById(R.id.btnBack);
         btnBack.setOnClickListener(v -> {
             finish(); // Quay lại màn trước (ResultActivity)
         });
+
         // Button chuyển đến màn tử vi
         Button btnHoroscope = findViewById(R.id.btnHoroscope);
         btnHoroscope.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Điều hướng đến màn xem tử vi
+                // ✅ SỬA: Truyền đủ dữ liệu cần thiết
                 Intent intent = new Intent(DetailActivity.this, HoroscopeActivity.class);
+                intent.putExtra("birthDate", birthDate); // ✅ THÊM: Truyền birthDate
+                intent.putExtra("name", name);           // ✅ THÊM: Truyền name
                 startActivity(intent);
             }
         });
     }
+
 
     private String getLifePathDescription(int number) {
         switch (number) {
