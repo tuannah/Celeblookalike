@@ -1,3 +1,5 @@
 <resources>
+    <string name="open">Open navigation drawer</string>
+    <string name="close">Close navigation drawer</string>
     <string name="app_name">CelebLookalike</string>
 </resources>
