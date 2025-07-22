@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     EditText edtName;
     DatePicker datePicker;
     Button btnSubmit;
+    Button btnPersonalDevelopment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         edtName = findViewById(R.id.edtName);
         datePicker = findViewById(R.id.datePicker);
         btnSubmit = findViewById(R.id.btnSubmit);
+        btnPersonalDevelopment = findViewById(R.id.btnPersonalDevelopment);
 
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +49,21 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+        });
+
+        btnPersonalDevelopment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = edtName.getText().toString().trim();
+                int day = datePicker.getDayOfMonth();
+                int month = datePicker.getMonth() + 1;
+                int year = datePicker.getYear();
+                String birthDate = String.format("%02d/%02d/%d", day, month, year);
+                Intent intent = new Intent(MainActivity.this, PersonalDevelopmentActivity.class);
+                intent.putExtra("name", name);
+                intent.putExtra("birthDate", birthDate);
+                startActivity(intent);
+            }
         });
 
     }
