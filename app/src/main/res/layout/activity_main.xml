@@ -36,4 +36,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Xem số chủ đạo" />
+
+    <Button
+        android:id="@+id/btnPersonalDevelopment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lộ trình phát triển bản thân"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnCompatibility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kiểm tra tương hợp giữa hai người"
+        android:layout_marginTop="16dp" />
 </LinearLayout>

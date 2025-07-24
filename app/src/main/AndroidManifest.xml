@@ -30,6 +30,9 @@
         <activity android:name=".ResultActivity" />
         <activity android:name=".DetailActivity" />
         <activity android:name=".HoroscopeActivity" />
+        <activity android:name=".PersonalDevelopmentActivity" />
+        <activity android:name=".CompatibilityActivity" />
+        <activity android:name=".CompatibilityResultActivity" />
     </application>
 
 </manifest>
